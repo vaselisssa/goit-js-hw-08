@@ -7,11 +7,6 @@ const refs = {
 };
 const STORAGE_KEY = 'feedback-form-state';
 
-//Функція для зберігання поточних даних
-function getFormData() {
-  return { email: refs.email.value, message: refs.message.value };
-}
-
 // Додаємо слухачів подій на форму
 refs.form.addEventListener('input', throttle(onFormImput, 500));
 refs.form.addEventListener('submit', onFormSubmit);
